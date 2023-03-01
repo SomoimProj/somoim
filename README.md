@@ -1,5 +1,5 @@
 # somoim
-
+notion : https://www.notion.so/BE-37f65f2876b44cdcabd9d9cebad13897
 Use : SpringBoot, Jpa, Mysql, Redis, Docker, Aws
 
 ## 멤버
