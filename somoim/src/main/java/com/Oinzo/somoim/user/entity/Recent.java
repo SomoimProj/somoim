@@ -1,4 +1,9 @@
 package com.Oinzo.somoim.user.entity;
 
-public class Recent {
+import com.Oinzo.somoim.common.entity.BaseEntity;
+
+import javax.persistence.Entity;
+
+@Entity
+public class Recent extends BaseEntity {
 }

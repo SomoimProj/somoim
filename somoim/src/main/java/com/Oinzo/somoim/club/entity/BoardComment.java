@@ -1,4 +1,9 @@
 package com.Oinzo.somoim.club.entity;
 
-public class BoardComment {
+import com.Oinzo.somoim.common.entity.BaseEntity;
+
+import javax.persistence.Entity;
+
+@Entity
+public class BoardComment extends BaseEntity {
 }

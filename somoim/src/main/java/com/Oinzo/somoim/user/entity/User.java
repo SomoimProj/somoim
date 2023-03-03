@@ -1,4 +1,9 @@
 package com.Oinzo.somoim.user.entity;
 
-public class User {
+import com.Oinzo.somoim.common.entity.BaseEntity;
+
+import javax.persistence.Entity;
+
+@Entity
+public class User extends BaseEntity {
 }

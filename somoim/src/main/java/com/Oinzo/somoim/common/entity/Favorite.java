@@ -1,4 +1,7 @@
 package com.Oinzo.somoim.common.entity;
 
-public class Favorite {
+import javax.persistence.Entity;
+
+@Entity
+public class Favorite extends BaseEntity{
 }

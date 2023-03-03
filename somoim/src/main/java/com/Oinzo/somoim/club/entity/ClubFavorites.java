@@ -1,4 +1,9 @@
 package com.Oinzo.somoim.club.entity;
 
-public class ClubFavorites {
+import com.Oinzo.somoim.common.entity.BaseEntity;
+
+import javax.persistence.Entity;
+
+@Entity
+public class ClubFavorites extends BaseEntity {
 }
