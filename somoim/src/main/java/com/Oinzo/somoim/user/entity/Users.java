@@ -1,10 +1,15 @@
 package com.Oinzo.somoim.user.entity;
 
 import com.Oinzo.somoim.common.entity.BaseEntity;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.time.LocalDate;
 
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 public class Users extends BaseEntity {
 
@@ -12,22 +17,22 @@ public class Users extends BaseEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column
+    @Column(nullable = false)
     private String name;
 
-    @Column
+    @Column(nullable = false)
     private String birth;
 
-    @Column
+    @Column(nullable = false)
     private String gender;
 
-    @Column
+    @Column(nullable = false)
     private String area;
 
     @Column
     private String introduction;
 
-    @Column
+    @Column(nullable = false)
     private String phoneNumber;
 
     @Column
