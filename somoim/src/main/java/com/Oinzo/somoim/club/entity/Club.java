@@ -1,9 +1,8 @@
 package com.Oinzo.somoim.club.entity;
 
 import com.Oinzo.somoim.common.entity.BaseEntity;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import com.sun.istack.NotNull;
+import lombok.*;
 
 import javax.persistence.*;
 
@@ -11,29 +10,29 @@ import javax.persistence.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
+@Builder
 public class Club extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
+    @NotNull
     private String name;
 
-    @Column
     private String description;
 
-    @Column
     private String imageUrl;
 
-    @Column(nullable = false)
+    @NotNull
     private String area;
 
-    @Column(nullable = false)
+    @NotNull
     private int memberLimit;
 
-    @Column(nullable = false)
+    @NotNull
     private int memberCnt;
 
-    @Column(nullable = false)
+    @NotNull
     private String favorite;
+
 }
