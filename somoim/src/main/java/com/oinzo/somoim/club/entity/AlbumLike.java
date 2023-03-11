@@ -5,5 +5,5 @@ import com.oinzo.somoim.common.entity.BaseEntity;
 import javax.persistence.Entity;
 
 @Entity
-public class ClubFavorites extends BaseEntity {
+public class AlbumLike extends BaseEntity {
 }
