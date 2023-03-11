@@ -4,8 +4,8 @@ notion : https://www.notion.so/BE-37f65f2876b44cdcabd9d9cebad13897
 Use : SpringBoot, Jpa, Mysql, Redis, Docker, Aws
 
 ## 멤버
-- [ ] 회원 가입
-- [ ] 전화번호 인증
+- [ ] 회원 가입 (이메일)
+- [ ] 회원 가입 (소셜로그인-카카오/구글)
 - [ ] 비밀번호 재발행
 - [ ] 로그인(JWT 사용 예정)
 - [ ] 멤버 정보 수정 (전화번호 등등)
