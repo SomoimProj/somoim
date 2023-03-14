@@ -3,8 +3,8 @@ package com.oinzo.somoim.user.entity;
 import com.oinzo.somoim.common.entity.BaseEntity;
 import com.oinzo.somoim.common.type.Gender;
 import com.oinzo.somoim.common.type.Provider;
+import com.oinzo.somoim.user.dto.GoogleUserInfoDto;
 import com.oinzo.somoim.user.dto.KakaoUserInfoDto;
-import java.time.LocalDate;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -44,6 +44,15 @@ public class User extends BaseEntity {
 //            .birth(kakaoUserInfoDto.getBirthday())
             .gender(kakaoUserInfoDto.getGender())
             .profileUrl(kakaoUserInfoDto.getProfileUrl())
+            .build();
+    }
+
+    public static User from(GoogleUserInfoDto googleUserInfoDto) {
+        return User.builder()
+            .provider(Provider.GOOGLE)
+            .providerId(googleUserInfoDto.getGoogleId())
+            .name(googleUserInfoDto.getName())
+            .profileUrl(googleUserInfoDto.getProfileUrl())
             .build();
     }
 }
