@@ -2,7 +2,7 @@ package com.oinzo.somoim.user.entity;
 
 import com.oinzo.somoim.common.entity.BaseEntity;
 import com.oinzo.somoim.common.type.Gender;
-import com.oinzo.somoim.common.type.Provider;
+import com.oinzo.somoim.common.type.SocialType;
 import com.oinzo.somoim.user.dto.GoogleUserInfoDto;
 import com.oinzo.somoim.user.dto.KakaoUserInfoDto;
 import lombok.AccessLevel;
@@ -34,13 +34,13 @@ public class User extends BaseEntity {
     private String favorite;
 
     @Enumerated(value = EnumType.STRING)
-    private Provider provider;
-    private String providerId;
+    private SocialType socialType;
+    private String socialId;
 
     public static User from(KakaoUserInfoDto kakaoUserInfoDto) {
         return User.builder()
-            .provider(Provider.KAKAO)
-            .providerId(String.valueOf(kakaoUserInfoDto.getKakaoId()))
+            .socialType(SocialType.KAKAO)
+            .socialId(String.valueOf(kakaoUserInfoDto.getKakaoId()))
 //            .birth(kakaoUserInfoDto.getBirthday())
             .gender(kakaoUserInfoDto.getGender())
             .profileUrl(kakaoUserInfoDto.getProfileUrl())
@@ -49,8 +49,8 @@ public class User extends BaseEntity {
 
     public static User from(GoogleUserInfoDto googleUserInfoDto) {
         return User.builder()
-            .provider(Provider.GOOGLE)
-            .providerId(googleUserInfoDto.getGoogleId())
+            .socialType(SocialType.GOOGLE)
+            .socialId(googleUserInfoDto.getGoogleId())
             .name(googleUserInfoDto.getName())
             .profileUrl(googleUserInfoDto.getProfileUrl())
             .build();
