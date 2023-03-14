@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class BaseResponse<T> {
 
-    public static final BaseResponse<?> SUCCESS_NO_DATA = new BaseResponse<>();
+    public static final BaseResponse<?> SUCCESS_NO_DATA = new BaseResponse<>(); // 전송할 데이터가 없는 성공 응답
 
     private int code;
     private String message;
